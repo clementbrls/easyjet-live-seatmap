@@ -1,0 +1,8 @@
+:8080 {
+    root * /srv
+    file_server
+    reverse_proxy /ejavailability/* https://www.easyjet.com {
+        header_up Host www.easyjet.com
+        header_down -Set-Cookie
+    }
+}
