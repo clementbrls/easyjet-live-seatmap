@@ -115,7 +115,7 @@ export default function SeatPlanViewer() {
         return;
     }
 
-    const url = `/ejavailability/api/v91/seating/getseatplan?ArrivalIata=${arrival}&CurrencyCode=EUR&DepartureDate=${date}&DepartureIata=${departure}&FareCode=Y&FareType=0&FlightInternalId=aaa&FlightNumber=${flightNumber}&LanguageCode=FR`;
+    const url = `/ejavailability/api/v92/seating/getseatplan?ArrivalIata=${arrival}&CurrencyCode=EUR&DepartureDate=${date}&DepartureIata=${departure}&FareCode=Y&FareType=0&FlightInternalId=aaa&FlightNumber=${flightNumber}&LanguageCode=FR`;
 
     try {
       const res = await axios.get<SeatPlan>(url);
